@@ -3,48 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Influvation Project Performance Report 2569</title>
+<title>Influvation & TechNow by NSTDA: Performance Report 2569</title>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#e9edf1;--ink:#1c2733;--mute:#5d6b78;--line:#dfe5ea;--navy:#14283d;--c1:#0e8a7d;--c2:#4b5bd6;--c3:#d9822b;
+:root{--bg:#e9edf1;--ink:#1c2733;--mute:#5d6b78;--line:#dfe5ea;--z1:#14283d;--z2:#7a1f47;--z3:#3b4552;--c1:#0e8a7d;--c2:#4b5bd6;--c3:#d9822b;--c4:#b8336a;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f151b}}
 :root[data-theme="dark"]{--bg:#0f151b}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box;margin:0}
-body{background:var(--bg);font-family:'Prompt','Sukhumvit Set','Noto Sans Thai',sans-serif;color:var(--ink);padding:12px;display:flex;justify-content:center;font-size:9pt;line-height:1.4}
-.sheet{background:#fff;width:210mm;max-width:100%;min-height:297mm;padding:9mm 10mm;display:flex;flex-direction:column;gap:4mm}
-header{background:var(--navy);color:#fff;border-radius:3mm;padding:5mm 6mm}
-header small{letter-spacing:.14em;text-transform:uppercase;font-size:7pt;color:#9fb6c9}
-header h1{font-size:17pt;font-weight:700;line-height:1.2;margin:1mm 0}
-header p{font-size:8.5pt;color:#d3e0ea}
-.card{border:1px solid var(--line);border-top:1.6mm solid var(--c);border-radius:3mm;padding:3.5mm 4.5mm;flex:1;display:flex;flex-direction:column;gap:2.2mm}
-.card h2{font-size:11.5pt;font-weight:700;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
-.card h2 span{font-size:7.5pt;font-weight:500;color:#fff;background:var(--c);border-radius:20px;padding:0 3mm}
-.kpis{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:2mm}
-.k{background:color-mix(in srgb,var(--c) 9%,#fff);border-radius:2mm;padding:1.6mm 2.2mm}
+body{background:var(--bg);font-family:'Prompt','Sukhumvit Set','Noto Sans Thai',sans-serif;color:var(--ink);padding:12px;display:flex;flex-direction:column;align-items:center;gap:14px;font-size:9pt;line-height:1.35}
+.sheet{background:#fff;width:210mm;max-width:100%;min-height:297mm;padding:8mm 9mm;display:flex;flex-direction:column;gap:3mm}
+header{text-align:center}
+header small{letter-spacing:.14em;text-transform:uppercase;font-size:7pt;color:var(--mute)}
+header h1{font-size:15pt;font-weight:700;line-height:1.25}
+.zone{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:2mm;border:1px solid var(--line);border-radius:3mm;padding:2.5mm;background:#fafbfc}
+.zh{background:var(--z);color:#fff;border-radius:2mm;padding:2.5mm 4mm;display:flex;justify-content:space-between;align-items:center;gap:4mm;flex-wrap:wrap}
+.zh h2{font-size:13.5pt;font-weight:700;line-height:1.2}
+.zh h2 small{display:block;font-size:7.5pt;font-weight:400;opacity:.8}
+.zh div{text-align:right;font-size:7.5pt}
+.zh div b{display:block;font-size:17pt;line-height:1.1}
+.cols{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:2mm}
+.card{background:#fff;border:1px solid var(--line);border-top:1.4mm solid var(--c);border-radius:2mm;padding:2.5mm 3mm;display:flex;flex-direction:column;gap:1.6mm;min-width:0}
+.card h3{font-size:10.5pt;font-weight:700;line-height:1.25}
+.card h3 small{display:block;font-size:7.8pt;font-weight:400;color:var(--mute)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm}
+.k{background:color-mix(in srgb,var(--c) 9%,#fff);border-radius:1.6mm;padding:1.6mm 2mm}
 .k b{display:block;font-size:13pt;font-weight:700;color:var(--c);line-height:1.2}
-.k i{font-style:normal;font-size:7pt;color:var(--mute)}
-ul{padding-left:4mm}
-li{margin-bottom:.4mm}
-.ins{background:#f4f6f8;border-left:1.2mm solid var(--c);border-radius:0 2mm 2mm 0;padding:1.6mm 3mm;font-size:8.5pt}
+.k i{font-style:normal;font-size:7.3pt;color:var(--mute);line-height:1.2;display:block}
+ul{padding-left:3.6mm}
+li{margin-bottom:.5mm}
+.ins{margin-top:auto;background:#f4f6f8;border-left:1mm solid var(--c);border-radius:0 1.6mm 1.6mm 0;padding:1.6mm 2.4mm;font-size:8.2pt}
 .ins b{color:var(--c)}
-footer{font-size:7.5pt;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px}
-@media (max-width:600px){.kpis{grid-template-columns:repeat(2,1fr)}}
-@media print{@page{size:A4;margin:0}body{padding:0;background:#fff}.sheet{width:210mm;height:297mm;min-height:0;overflow:hidden}.kpis{grid-template-columns:repeat(var(--n),1fr)!important}}
+.t{background:#fff;border:1px solid var(--line);border-top:1.4mm solid var(--c4);border-radius:2mm;padding:2.5mm 3mm;display:flex;flex-direction:column;gap:1.2mm;min-width:0}
+.t .n{font-size:7.8pt;font-weight:700;color:var(--c4);letter-spacing:.06em}
+.t p{font-size:9pt;font-weight:500;line-height:1.3}
+.t p.d{font-size:7.8pt;font-weight:400;color:var(--mute)}
+.t b.v{font-size:14pt;color:var(--c4);line-height:1.1;margin-top:auto}
+.t .s{font-size:7.5pt;color:var(--mute)}
+.t em{display:block;height:2mm;border-radius:2mm;background:var(--c4);width:var(--w)}
+.t .top{font-size:6.5pt;background:var(--c4);color:#fff;border-radius:10px;padding:0 2mm;align-self:flex-start}
+.cmp{display:grid;grid-template-columns:26mm 1fr 1fr;gap:1.2mm;font-size:8.2pt}
+.cmp>div{padding:2mm 2.6mm;background:#fff;border:1px solid var(--line);border-radius:1.6mm}
+.cmp .h{color:#fff;font-weight:700;border:0;font-size:9.5pt}
+.cmp .a{background:var(--z2)}.cmp .b{background:var(--z1)}.cmp .l{background:#eef1f4;font-weight:700;font-size:8pt}
+.cmp b{display:block}
+.sw{display:grid;grid-template-columns:1fr 1fr;gap:2.5mm}
+.sw .card{gap:2mm}
+.sw h4{font-size:8.3pt;color:var(--c)}
+.sw li{font-size:8.1pt}
+.hy{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5mm}
+.hy div{background:#fff;border:1px solid var(--line);border-top:1.4mm solid var(--z3);border-radius:2mm;padding:2.5mm 3mm;font-size:8.1pt}
+.hy .no{display:inline-block;background:var(--z3);color:#fff;border-radius:50%;width:6mm;height:6mm;line-height:6mm;text-align:center;font-weight:700;margin-bottom:1mm}
+.hy b{display:block;color:var(--z3);font-size:8.8pt;margin-bottom:.8mm}
+.hy small{display:block;margin-top:1mm;color:var(--mute);font-size:7pt}
+.share{display:flex;gap:.6mm;border-radius:2mm;overflow:hidden;font-size:7.6pt;color:#fff;text-align:center}
+.share span{padding:1.3mm 0;white-space:nowrap;overflow:hidden}
+.cap{font-size:7.5pt;color:var(--mute)}
+.sec{font-size:9.5pt;font-weight:700;color:var(--z3);border-left:1.4mm solid var(--z3);padding-left:2.5mm}
+footer{font-size:7pt;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px}
+@media (max-width:700px){.cols,.hy,.sw{grid-template-columns:1fr}.cmp{grid-template-columns:18mm 1fr 1fr}}
+@media print{@page{size:A4;margin:0}body{padding:0;background:#fff;display:block}.sheet{width:210mm;height:297mm;min-height:0;break-after:page;page-break-after:always}.sheet:last-child{break-after:auto;page-break-after:auto}.cols{grid-template-columns:repeat(var(--n),1fr)!important}.hy{grid-template-columns:repeat(3,1fr)!important}.sw{grid-template-columns:1fr 1fr!important}.cmp{grid-template-columns:26mm 1fr 1fr!important}}
 </style>
 </head>
 <body>
+
 <main class="sheet">
 <header>
-<small>Executive Summary · 2569</small>
-<h1>Influvation Project Performance Report</h1>
-<p>สรุปผลการสื่อสาร 3 โครงการ: Low Carbon Innovation, Adaptive Education Platform และนวัตกรรมเพื่อการเกษตร รวมยอดรับชมกว่า 430,000 views</p>
+<small>Executive Summary · 2569 · งานสื่อสารการวิจัย (RCS)</small>
+<h1>Influvation &amp; TechNow by NSTDA: Performance Report</h1>
 </header>
 
-<section class="card" style="--c:var(--c1)">
-<h2>1 · Low Carbon Innovation (NAC 2026)<span>Facebook "ตั้งหลัก" · 220K followers</span></h2>
-<div class="kpis" style="--n:6">
+<section class="zone">
+<div class="zh" style="--z:var(--z1)">
+<h2>Influvation<small>3 โครงการสื่อสารร่วมกับ Creator / Influencer</small></h2>
+<div><b>430,000+</b>views รวมจาก 3 โครงการ</div>
+</div>
+<div class="cols" style="--n:3">
+
+<article class="card" style="--c:var(--c1)">
+<h3>1 · Low Carbon Innovation (NAC 2026)<small>Facebook "ตั้งหลัก" · 220K followers</small></h3>
+<div class="kpis">
 <div class="k"><b>92,812</b><i>Views · Photo Album</i></div>
 <div class="k"><b>568</b><i>Link Clicks</i></div>
 <div class="k"><b>฿5.28</b><i>Cost / Link Click</i></div>
@@ -52,42 +91,121 @@ footer{font-size:7.5pt;color:var(--mute);display:flex;justify-content:space-betw
 <div class="k"><b>2,267</b><i>Post Engagement</i></div>
 <div class="k"><b>฿21.89</b><i>Cost / View (VDO)</i></div>
 </div>
-<ul><li>Photo Album Post จากงานแถลงข่าว NAC 2026 และ VDO Highlight NAC 2026 โปรโมตผ่านเพจ "ตั้งหลัก"</li></ul>
-<div class="ins"><b>Insight:</b> ภาพนิ่งจากงานแถลงข่าวพาคนคลิกได้คุ้มค่า (฿5.28/คลิก) ส่วนวิดีโอมีต้นทุนต่อวิวสูงเพราะซื้อโฆษณาช่วงสั้นเกินไปจนระบบเรียนรู้น้อย ควรวางระยะเวลาโฆษณาให้ยาวขึ้น</div>
-</section>
+<ul><li><b>Photo Album Post</b> (แถลงข่าว NAC 2026): Views 92,812, Link Clicks 568</li><li><b>VDO Highlight NAC 2026:</b> Views 65,698, Engagement 2,267 (ซื้อโฆษณาระยะสั้น ระบบเรียนรู้น้อย)</li></ul>
+<div class="ins"><b>Insight:</b> ภาพนิ่งจากงานแถลงข่าวพาคนคลิกได้คุ้มค่า ส่วนวิดีโอมีต้นทุนต่อวิวสูงเพราะซื้อโฆษณาช่วงสั้นเกินไปจนระบบเรียนรู้น้อย</div>
+</article>
 
-<section class="card" style="--c:var(--c2)">
-<h2>2 · Adaptive Education Platform<span>LEAD Education · TikTok + Facebook</span></h2>
-<div class="kpis" style="--n:4">
+<article class="card" style="--c:var(--c2)">
+<h3>2 · Adaptive Education Platform<small>LEAD Education · TikTok + Facebook</small></h3>
+<div class="kpis">
 <div class="k"><b>260,000+</b><i>Views (Reach)</i></div>
 <div class="k"><b>14,700+</b><i>Total Engagement</i></div>
 <div class="k"><b>8 / 14</b><i>ครู-Influencer / โพสต์</i></div>
 <div class="k"><b>82,500</b><i>Top Views · ครูใหญ่</i></div>
+<div class="k"><b>31.9%</b><i>ER สูงสุด · JIMMEEEPANU</i></div>
+<div class="k"><b>237%</b><i>วิวเทียบฐานผู้ติดตาม · ครูคอม</i></div>
 </div>
 <ul>
-<li><b>ครูใหญ่:</b> ขับเคลื่อน Reach หลัก ยอดวิวสูงสุด 82,500 views (9,707 ไลก์)</li>
+<li><b>ครูใหญ่:</b> ขับเคลื่อน Reach หลัก (9,707 ไลก์)</li>
 <li><b>KIRINPHAK &amp; JIMMEEEPANU:</b> Engagement Rate สูงสุดในแคมเปญ (14.8% และ 31.9%)</li>
 <li><b>ครูคอม &amp; ครูโอ้ ป.1:</b> ยอดวิวเกินฐานผู้ติดตามเดิม (237% และ 163%)</li>
 </ul>
-<div class="ins"><b>Insight:</b> ครู-Influencer แต่ละกลุ่มทำหน้าที่ต่างกัน ทั้งสร้าง Reach ปริมาณมาก สร้าง Engagement สูง และดึงคนนอกฐานผู้ติดตาม การผสมผสานหลายแบบช่วยให้ผลลัพธ์ครอบคลุมกว่าใช้คนเดียว</div>
-</section>
+<div class="ins"><b>Insight:</b> Influencer แต่ละกลุ่มทำหน้าที่ต่างกัน ทั้งสร้าง Reach, Engagement และดึงคนนอกฐานผู้ติดตาม</div>
+</article>
 
-<section class="card" style="--c:var(--c3)">
-<h2>3 · นวัตกรรมเพื่อการเกษตร<span>Lark Chee · FB · TikTok · IG</span></h2>
-<div class="kpis" style="--n:4">
+<article class="card" style="--c:var(--c3)">
+<h3>3 · นวัตกรรมเพื่อการเกษตร<small>Lark Chee · FB · TikTok · IG</small></h3>
+<div class="kpis">
 <div class="k"><b>13,345</b><i>Views รวม</i></div>
 <div class="k"><b>567</b><i>Engagement</i></div>
 <div class="k"><b>4.2%</b><i>Engagement Rate</i></div>
 <div class="k"><b>&gt;50%</b><i>ผู้ชมกลุ่มใหม่</i></div>
+<div class="k"><b>70%</b><i>ผู้ชมอายุ 25–44 ปี</i></div>
+<div class="k"><b>3 / 3</b><i>นวัตกรรม / แพลตฟอร์ม</i></div>
 </div>
 <ul>
-<li>ชูนวัตกรรม 3 ด้าน: ชีวภัณฑ์ (ไบโอเทค), ชุดตรวจ N-SENSE ลดเวลาตรวจเหลือ 20 นาที (นาโนเทค), ถุงห่อทุเรียน Magik Growth (เอ็มเทค) ถ่ายทำสถานที่จริง จ.ระยอง</li>
-<li><b>Audience:</b> 70% เป็นวัยทำงานอายุ 25–44 ปี</li>
+<li>ชีวภัณฑ์ (ไบโอเทค)</li>
+<li>ชุดตรวจ N-SENSE ลดเวลาตรวจเหลือ 20 นาที (นาโนเทค)</li>
+<li>ถุงห่อทุเรียน Magik Growth (เอ็มเทค) · ถ่ายทำ จ.ระยอง</li>
 </ul>
-<div class="ins"><b>Insight:</b> ยอดรับชมไม่สูงเท่าโครงการอื่น แต่เข้าถึงผู้ชมกลุ่มใหม่กว่าครึ่งและกลุ่มวัยทำงานเป็นหลัก เหมาะกับการเปิดกลุ่มเป้าหมายใหม่ให้นวัตกรรมภาคเกษตร</div>
+<div class="ins"><b>Insight:</b> ยอดรับชมต่ำกว่าโครงการอื่น แต่ได้กลุ่มใหม่กว่าครึ่งและวัยทำงานเป็นหลัก เหมาะกับการเปิดกลุ่มเป้าหมายใหม่</div>
+</article>
+
+</div>
 </section>
 
-<footer><span>จัดทำโดย งานสื่อสารการวิจัย (RCS) ฝ่ายประชาสัมพันธ์ สวทช.</span><span>ปี 2569</span></footer>
+<section class="zone">
+<div class="zh" style="--z:var(--z2)">
+<h2>TechNow by NSTDA<small>5 แคมเปญยุทธศาสตร์ สื่อสารงานวิจัยและนวัตกรรม สวทช.</small></h2>
+<div><b>฿5,331,880</b>Total PR Value จาก 5 แคมเปญ</div>
+</div>
+<div class="cols" style="--n:5">
+<article class="t"><span class="n">TECHNOW#1</span><p>7 นวัตกรรมสู้ฝุ่น PM 2.5</p><p class="d">สื่อสารงานวิจัยและเทคโนโลยีของ สวทช. เพื่อบรรเทาและแก้ปัญหามลพิษทางอากาศฝุ่น PM 2.5</p><b class="v">฿1,154,808</b><em style="--w:79%"></em><span class="s">21.7% ของทั้งหมด</span></article>
+<article class="t"><span class="n">TECHNOW#2</span><p>4 นวัตกรรม ฝ่าวิกฤตพลังงาน มุ่งสู่ความเป็นกลางทางคาร์บอน</p><p class="d">นำเสนอนวัตกรรมพลังงานสะอาดและการลดก๊าซเรือนกระจก เพื่อนำประเทศมุ่งสู่ Carbon Neutrality</p><b class="v">฿847,722</b><em style="--w:58%"></em><span class="s">15.9% ของทั้งหมด</span></article>
+<article class="t"><span class="n">TECHNOW#3</span><p>Low Carbon &amp; Carbon Neutrality: โอกาสอนาคตยั่งยืน</p><p class="d">ชูศักยภาพเทคโนโลยีคาร์บอนต่ำเพื่อภาคธุรกิจไทย บนฐานวิจัยสู่อนาคตที่ยั่งยืน</p><span class="top">สูงสุด</span><b class="v">฿1,458,687</b><em style="--w:100%"></em><span class="s">27.4% ของทั้งหมด</span></article>
+<article class="t"><span class="n">TECHNOW#4</span><p>พลิกโฉมทุเรียนไทยด้วยวิจัยและนวัตกรรม สวทช.</p><p class="d">ยกระดับคุณภาพและการผลิต เพิ่มมูลค่าทุเรียนไทยด้วยวิทยาศาสตร์และนวัตกรรมเกษตรแม่นยำ</p><b class="v">฿1,074,421</b><em style="--w:74%"></em><span class="s">20.2% ของทั้งหมด</span></article>
+<article class="t"><span class="n">TECHNOW#5</span><p>นวัตกรรมสัตว์เลี้ยงและสัตว์เศรษฐกิจ (Pet Economy)</p><p class="d">โชว์ศักยภาพวิจัย ต่อยอดสู่ภาคอุตสาหกรรม ยกระดับเกษตรไทยและตอบรับเทรนด์ Pet Economy</p><b class="v">฿796,242</b><em style="--w:55%"></em><span class="s">14.9% ของทั้งหมด</span></article>
+</div>
+<div><div class="cap">สัดส่วน PR Value แยกตามแคมเปญ</div><div class="share"><span style="flex:21.7;background:#b8336a">#1 · 21.7%</span><span style="flex:15.9;background:#d46a97">#2 · 15.9%</span><span style="flex:27.4;background:#7a1f47">#3 · 27.4%</span><span style="flex:20.2;background:#c24d80">#4 · 20.2%</span><span style="flex:14.9;background:#e69bbb;color:#4a1029">#5 · 14.9%</span></div></div>
+<div class="ins" style="--c:var(--c4)"><b>Insight:</b> ประเด็นพลังงานและคาร์บอนต่ำ (#2 และ #3) รวมกันสร้าง PR Value ราว 2.3 ล้านบาท หรือกว่า 40% ของทั้งหมด โดย #3 สร้างมูลค่าสูงสุด</div>
+</section>
+
+<footer><span>จัดทำโดย งานสื่อสารการวิจัย (RCS) ฝ่ายประชาสัมพันธ์ สวทช.</span><span>ปี 2569 · หน้า 1 / 2</span></footer>
 </main>
+
+<main class="sheet">
+<header>
+<small>Strategic Comparison · 2569</small>
+<h1>TechNow by NSTDA vs Influvation: การเปรียบเทียบเชิงกลยุทธ์</h1>
+</header>
+
+<div class="sec">1 · Strategic Comparison Matrix</div>
+<div class="cmp">
+<div class="h"></div><div class="h a">TechNow by NSTDA</div><div class="h b">Influvation</div>
+<div class="l">เป้าหมายหลัก<br>Core Objective</div>
+<div><b>Mass Awareness &amp; Institutional Value</b>สร้างการรับรู้ในวงกว้างระดับประเทศ และสร้างภาพลักษณ์องค์กรผู้นำวิจัย</div>
+<div><b>Targeted Engagement &amp; Practical Adoption</b>สร้างความผูกพัน เข้าถึงกลุ่มเป้าหมายเฉพาะ (Niche) ด้วยคอนเทนต์ที่นำไปใช้ได้จริง</div>
+<div class="l">ตัววัดผลหลัก<br>Primary KPI</div>
+<div><b>PR Value รวม</b>5,331,880 บาท จาก 5 แคมเปญ</div>
+<div><b>Views, Engagement Rate &amp; Actions</b>ยอดวิว 260,000+ views, 14,700+ Engagements และ ER สูงสุด 31.9%</div>
+<div class="l">สื่อและผู้ส่งสาร<br>Media &amp; Creator Mix</div>
+<div><b>Top-Down / Mass PR</b>ผ่านสื่อหลักและแคมเปญประเด็นยุทธศาสตร์ชาติ (PM 2.5, Net Zero, ทุเรียน, Pet Economy)</div>
+<div><b>Bottom-Up / Creator-Led Content</b>ผ่าน Micro/Nano Influencer เช่น ครูผู้สอนจริง (LEAD) หรือ Creator สายลุยพื้นที่จริง (หลากฉี)</div>
+<div class="l">การเล่าเรื่อง<br>Storytelling</div>
+<div><b>Macro &amp; Policy-Level</b>เน้นแสดงศักยภาพงานวิจัย ผลกระทบเชิงเศรษฐกิจและสังคมในภาพใหญ่</div>
+<div><b>Problem-Solution &amp; Relatable</b>แก้ปัญหาเฉพาะจุด เช่น ชุดตรวจ N-SENSE ลดเวลาตรวจสารตกค้างทุเรียนเหลือ 20 นาที</div>
+</div>
+
+<div class="sec" style="margin-top:2mm">2 · จุดแข็งและข้อจำกัดของแต่ละโมเดล</div>
+<div class="sw">
+<article class="card" style="--c:var(--z2);border-top-color:var(--z2)">
+<h3>TechNow by NSTDA<small>กลยุทธ์สื่อสารภาพรวมและ PR Value</small></h3>
+<h4>จุดแข็ง</h4>
+<ul><li>เปลี่ยนงานวิจัยซับซ้อนในห้องปฏิบัติการให้เป็นประเด็นสาธารณะ (Public Agenda) ที่มีมูลค่าทางสื่อสูง</li>
+<li>Low Carbon &amp; Carbon Neutrality สร้าง PR Value สูงสุด 1,458,687 บาท</li></ul>
+<h4>ข้อจำกัด</h4>
+<ul><li>เน้น Reach และ PR Value ในภาพกว้าง อาจไม่ได้วัดความเข้าใจเชิงลึกหรือการนำไปใช้เฉพาะเจาะจงของกลุ่มเป้าหมายแต่ละกลุ่ม</li></ul>
+</article>
+<article class="card" style="--c:var(--z1);border-top-color:var(--z1)">
+<h3>Influvation<small>กลยุทธ์สื่อสารผ่าน Influencer และ Digital Native</small></h3>
+<h4>จุดแข็ง</h4>
+<ul><li><b>High Engagement Rate:</b> Micro/Nano Influencer เฉพาะกลุ่มสร้าง ER สูง เช่น KIRINPHAK (14.8%) และ JIMMEEEPANU (31.9%)</li>
+<li><b>Organic Reach Exceeding Followers:</b> ครูคอม และ ครูโอ้ ป.1 ดันยอดวิวเกินฐานผู้ติดตามเดิม 237% และ 163%</li>
+<li><b>New Audience Expansion:</b> คอนเทนต์ลงพื้นที่จริง (หลากฉี) ดึงผู้ชมกลุ่มใหม่ได้ ~50%</li></ul>
+<h4>ข้อจำกัด</h4>
+<ul><li>Project 1: บูสต์ VDO Highlight ช่วง 25–28 เม.ย. สั้นเกินไป ระบบโฆษณาเรียนรู้น้อย ทำให้ Cost per View สูง (฿21.89)</li></ul>
+</article>
+</div>
+
+<div class="sec" style="margin-top:2mm">3 · ข้อเสนอแนะเชิงบูรณาการ: Hybrid Communication Model (Phase 2)</div>
+<div class="hy">
+<div><span class="no">1</span><b>Set the Macro Agenda</b>ใช้แคมเปญแบบ TechNow สื่อสารผ่านสื่อหลัก เพื่อสร้าง PR Value และความน่าเชื่อถือในระดับนโยบาย/สถาบัน<small>บทบาท: TechNow</small></div>
+<div><span class="no">2</span><b>Localize to Action</b>นำประเด็นจาก TechNow มาย่อยให้เข้าใจง่ายผ่าน Influencer เฉพาะกลุ่ม เล่าแบบ Problem-Solution จากการใช้งานจริง เพื่อเปลี่ยน Awareness เป็น Adoption<small>บทบาท: Influvation</small></div>
+<div><span class="no">3</span><b>Optimize Ads Performance</b>กำหนดระยะเวลายิงโฆษณาให้ยาวขึ้นในทุกแคมเปญ Influencer เพื่อลด Cost per View และเพิ่ม Cost Efficiency<small>ใช้กับทุกแคมเปญ Influencer</small></div>
+</div>
+
+<footer style="margin-top:auto"><span>จัดทำโดย งานสื่อสารการวิจัย (RCS) ฝ่ายประชาสัมพันธ์ สวทช.</span><span>ปี 2569 · หน้า 2 / 2</span></footer>
+</main>
+
 </body>
 </html>
